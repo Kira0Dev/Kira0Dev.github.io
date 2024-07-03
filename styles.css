@@ -1,0 +1,61 @@
+/* Estilo general para el cuerpo y el header */
+body {
+    background-color: #ADB9E3;
+    font-family: Century Schoolbook;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: #A379C9;
+    color: #fff;
+    padding: 10px 20px;
+    position: fixed; /* Hace que el header se mantenga fijo */
+    top: 0; /* Lo fija en la parte superior */
+    width: 100%; 
+    z-index: 1000; 
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin-right: 30px;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 20px;
+}
+
+.perfilPhoto{
+    margin-top: 70px;
+    width: 20%;
+}
+
+section{
+    display: flex;
+    justify-content: center;
+}
+
+p{
+    font-size: 18px;
+    line-height: 1.8;
+}
+
+#inicio p{
+    text-align: center;
+}
+
+#acerca{
+    background-color: #9F86C0;
+}
