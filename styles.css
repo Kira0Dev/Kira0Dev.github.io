@@ -1,7 +1,6 @@
-/* Estilo general para el cuerpo y el header */
 body {
     background-color: #ADB9E3;
-    font-family: Century Schoolbook;
+    font-family: Century Schoolbook, serif;
     margin: 0;
     padding: 0;
 }
@@ -37,25 +36,67 @@ nav ul li a {
     font-size: 20px;
 }
 
-.perfilPhoto{
+.perfilPhoto {
     margin-top: 70px;
     width: 20%;
+    border-radius: 50%;
+    border: 5px solid #FFD2FC;
 }
 
-section{
+section {
     display: flex;
     justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin: 20px 0;
 }
 
-p{
-    font-size: 18px;
-    line-height: 1.8;
-}
-
-#inicio p{
+.section-content {
     text-align: center;
 }
 
-#acerca{
+p {
+    font-size: 18px;
+    line-height: 1.8;
+    color: #333;
+}
+
+#inicio p {
+    text-align: center;
+}
+
+#acerca, #proyectos, #contacto {
     background-color: #9F86C0;
+    padding: 40px 20px;
+    color: #fff;
+    text-align: center;
+}
+
+#acerca h1, #proyectos h1, #contacto h1 {
+    color: #FFD2FC;
+}
+
+.project-item {
+    background-color: #E980FC;
+    padding: 20px;
+    margin: 20px 0;
+    border-radius: 10px;
+}
+
+.project-item h2 {
+    color: #B96AC9;
+}
+
+.project-item p {
+    color: #fff;
+}
+
+#contacto p {
+    font-size: 20px;
+}
+
+#contacto a {
+    color: #FFD2FC;
+    font-weight: bold;
+    text-decoration: none;
 }
