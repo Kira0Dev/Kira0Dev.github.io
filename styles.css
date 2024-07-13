@@ -65,7 +65,15 @@ p {
     text-align: center;
 }
 
-#acerca, #proyectos, #contacto {
+
+#proyectos{
+    background-color: #ADB9E3;
+    padding: 40px 20px;
+    color: #fff;
+    text-align: center;
+}
+
+#acerca, #contacto {
     background-color: #9F86C0;
     padding: 40px 20px;
     color: #fff;
@@ -74,6 +82,11 @@ p {
 
 #acerca h1, #proyectos h1, #contacto h1 {
     color: #FFD2FC;
+}
+
+.project-content{
+    display: flex;
+    align-items: center;
 }
 
 .project-item {
