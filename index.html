@@ -24,7 +24,9 @@
     <div id="inicio">
         <section class="section-content">
             <img class="perfilPhoto" src="https://i.imgur.com/rzJ9DmA.jpeg" alt="Foto de perfil">
-        </section>
+        </section><button id="theme-toggle" style="margin-left: 46%; background-color: #B96AC9; color: white; border: none; padding: 10px; border-radius: 5px; cursor: pointer;">
+        Cambiar tema
+    </button>
         <section class="section-content">
             <p>
                 Erick Fabrizzio Pineda Herrera<br>
@@ -35,7 +37,7 @@
     </div>
     <div id="acerca">
         <h1>Bienvenido</h1>
-        <p>Soy Erick Fabrizzio Pineda Herrera, soy ingeniero en Software,<br>tengo experiencia en programación en los lenguajes: C++, Java y C#.<br>Además de experiencia en el área backend y frontend de páginas web,<br>haciendo uso de HTML, JavaScript, PHP y CSS.<br>También cuento con experiencia en programación de videojuegos tanto 2D como 3D,<br>en diversas plataformas, haciendo uso de lenguajes como C++, C# y similares.</p>
+        <p>Soy Erick Fabrizzio Pineda Herrera, soy ingeniero en Software,<br>tengo experiencia en programación en los lenguajes: C++, Java, C# y Phyton.<br>Además de experiencia en el área backend y frontend de páginas web,<br>haciendo uso de HTML, JavaScript, PHP y CSS.<br>También cuento con experiencia en programación de videojuegos tanto 2D como 3D,<br>en diversas plataformas, haciendo uso de lenguajes como C++, C# y similares.</p>
     </div>
     <div id="proyectos">
         <h1>Proyectos</h1>
@@ -106,6 +108,8 @@
         <p>Instagram: <a href="https://www.instagram.com/erickherrera77/">erickherrera77</a></p>
         <p>Github: <a href="https://github.com/Kira0Dev">Kira0Dev</a></p>
         <p>Correo: <a href="mailto:erifabrizz@gmail.com">erifabrizz@gmail.com</a></p>
+        <p>Linkedin: <a href="https://www.linkedin.com/in/erick-pineda-3b1587310">Erick Pineda</p>
+        <p>Estaré encantado de ponerme en contacto contigo</p>
     </div>
     <script>
         document.addEventListener('DOMContentLoaded', function() {
@@ -129,5 +133,81 @@
             });
         });
     </script>
+
+    <script>
+    document.addEventListener('DOMContentLoaded', () => {
+        const themeToggle = document.getElementById('theme-toggle');
+        const body = document.body;
+
+        // Cargar tema guardado en localStorage
+        const savedTheme = localStorage.getItem('theme');
+        if (savedTheme === 'dark') {
+            body.classList.add('dark-mode');
+            themeToggle.textContent = 'Tema claro';
+        }
+
+        // Alternar tema
+        themeToggle.addEventListener('click', () => {
+            body.classList.toggle('dark-mode');
+            if (body.classList.contains('dark-mode')) {
+                themeToggle.textContent = 'Tema claro';
+                localStorage.setItem('theme', 'dark');
+            } else {
+                themeToggle.textContent = 'Tema oscuro';
+                localStorage.setItem('theme', 'light');
+            }
+        });
+    });
+</script>
+
+<script>
+    document.addEventListener('DOMContentLoaded', () => {
+        const sections = document.querySelectorAll('div[id]');
+        const navLinks = document.querySelectorAll('nav ul li a');
+
+        const setActiveLink = () => {
+            let currentSection = null;
+
+            sections.forEach((section) => {
+                const sectionTop = section.offsetTop - 100; // Ajuste para el desplazamiento
+                if (window.scrollY >= sectionTop) {
+                    currentSection = section.id;
+                }
+            });
+
+            navLinks.forEach((link) => {
+                link.classList.remove('active');
+                if (currentSection && link.getAttribute('href').includes(currentSection)) {
+                    link.classList.add('active');
+                }
+            });
+        };
+
+        // Escuchar eventos de scroll
+        window.addEventListener('scroll', setActiveLink);
+
+        // Activar la sección correcta al cargar la página
+        setActiveLink();
+    });
+</script>
+
+<script>
+    document.addEventListener('DOMContentLoaded', () => {
+        const projectItems = document.querySelectorAll('.project-item');
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                }
+            });
+        }, { threshold: 0.1 }); // Se activa cuando el 10% del elemento es visible
+
+        projectItems.forEach(item => observer.observe(item));
+    });
+</script>
+
+
+
 </body>
 </html>

@@ -1,10 +1,52 @@
 /* Estilos generales */
+html {
+    scroll-behavior: smooth;
+}
+
 body {
     background-color: #ADB9E3;
     font-family: Century Schoolbook, serif;
     margin: 0;
     padding: 0;
 }
+
+
+/* Tema oscuro */
+body.dark-mode {
+    background-color: #003161;
+}
+
+/* Cambia colores de enlaces, botones y otros elementos */
+body.dark-mode a {
+    color: #FFD2FC;
+}
+
+body.dark-mode p {
+    color: #E2DFD0;
+}
+
+body.dark-mode #acerca {
+    background-color: #4F1787;
+}
+
+body.dark-mode #proyectos {
+    background-color: #433D8B;
+}
+
+body.dark-mode .ver-mas, 
+body.dark-mode .ver-menos {
+    background-color: #333;
+    color: #FFD2FC;
+}
+
+body.dark-mode header {
+    background-color: #444;
+}
+
+body.dark-mode .project-item {
+    background-color: #555;
+}
+
 
 label {
     display: none;
@@ -44,6 +86,13 @@ nav ul li a {
     font-weight: bold;
     font-size: 20px;
 }
+
+
+nav ul li a.active {
+    border-bottom: 2px solid #FFD2FC;
+    color: #FFD2FC;
+}
+
 
 .perfilPhoto {
     margin-top: 70px;
@@ -137,6 +186,7 @@ p {
     border-radius: 5px;
     cursor: pointer;
     margin-top: 10px;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
 }
 
 .ver-mas:hover, .ver-menos:hover {
@@ -342,4 +392,26 @@ p {
     #contacto p {
         font-size: 18px;
     }
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.project-item {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: all 0.5s ease-in-out;
+}
+
+.project-item.visible {
+    opacity: 1;
+    transform: translateY(0);
 }
