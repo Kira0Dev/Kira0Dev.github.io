@@ -10,6 +10,11 @@ body {
     padding: 0;
 }
 
+body, p, a, header, .project-item, .ver-mas, .ver-menos {
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+
 
 /* Tema oscuro */
 body.dark-mode {
@@ -414,4 +419,124 @@ p {
 .project-item.visible {
     opacity: 1;
     transform: translateY(0);
+}
+
+/* Experiencia laboral */
+#experiencia {
+    background-color: #8AAAE5; 
+    padding: 40px 20px;
+    text-align: center;
+    color: #fff;
+}
+
+.exp-item {
+    background-color: #5A76B8;
+    padding: 20px;
+    margin: 20px 0;
+    border-radius: 10px;
+    color: #fff;
+}
+
+/* Cursos y certificados */
+#cursos {
+    background-color: #C19EE0;
+    padding: 40px 20px;
+    text-align: center;
+    color: #fff;
+}
+
+.curso-item {
+    background-color: #A77BCF;
+    padding: 20px;
+    margin: 20px 0;
+    border-radius: 10px;
+}
+
+.curso-item img {
+    width: 50%;
+    margin-top: 10px;
+    border-radius: 5px;
+}
+
+/* Modo oscuro para las nuevas secciones */
+body.dark-mode #experiencia {
+    background-color: #1B3B6F;
+}
+
+body.dark-mode .exp-item {
+    background-color: #274690;
+}
+
+body.dark-mode #cursos {
+    background-color: #4C1C6F;
+}
+
+body.dark-mode .curso-item {
+    background-color: #371257;
+}
+
+.section-desc {
+    font-size: 18px;
+    margin-bottom: 10px;
+    color: #f5f5f5;
+}
+
+.section-hidden {
+    display: none;
+}
+
+.toggle-section {
+    background-color: #B96AC9;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-bottom: 20px;
+    transition: background-color 0.3s ease;
+}
+
+.toggle-section:hover {
+    background-color: #FFD2FC;
+    color: #333;
+}
+
+/* Modo oscuro para botones */
+body.dark-mode .toggle-section {
+    background-color: #333;
+    color: #FFD2FC;
+}
+
+
+
+/* Sección extracurricular */
+#extra {
+    background-color: #E6D5F7; /* lavanda claro */
+    padding: 40px 20px;
+    text-align: center;
+    color: #333; /* texto oscuro para contraste */
+}
+
+.extra-item {
+    background-color: #B785E8; /* morado medio */
+    padding: 20px;
+    margin: 20px 0;
+    border-radius: 10px;
+    color: #fff;
+}
+
+.extra-item img {
+    width: 50%;
+    margin-top: 10px;
+    border-radius: 5px;
+}
+
+/* Modo oscuro */
+body.dark-mode #extra {
+    background-color: #5B3178;
+}
+
+body.dark-mode .extra-item {
+    background-color: #43205B;
 }
