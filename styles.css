@@ -135,15 +135,20 @@ p {
     text-align: center;
 }
 
-#acerca, #contacto {
+#acerca, #links {
     background-color: #9F86C0;
     padding: 40px 20px;
     color: #fff;
     text-align: center;
 }
 
-#acerca h1, #proyectos h1, #contacto h1 {
+#acerca h1, #proyectos h1, #links h1 {
     color: #FFD2FC;
+}
+
+.languajes {
+    flex-direction: column;
+    align-items: center;
 }
 
 .project-content {
@@ -171,11 +176,11 @@ p {
     color: #fff;
 }
 
-#contacto p {
+#links p {
     font-size: 20px;
 }
 
-#contacto a {
+#links a {
     color: #FFD2FC;
     font-weight: bold;
     text-decoration: none;
@@ -394,7 +399,7 @@ p {
         font-size: 16px;
     }
 
-    #contacto p {
+    #links p {
         font-size: 18px;
     }
 }
@@ -423,7 +428,7 @@ p {
 
 /* Experiencia laboral */
 #experiencia {
-    background-color: #8AAAE5; 
+    background-color: #8AAAE5; /* distinto a proyectos */
     padding: 40px 20px;
     text-align: center;
     color: #fff;
@@ -485,6 +490,73 @@ body.dark-mode .curso-item {
     display: none;
 }
 
+/* formulario */
+form button {
+    background-color: #B96AC9;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-bottom: 20px;
+    transition: background-color 0.3s ease;
+    align-self: center;
+}
+
+form label {
+    display: inline;
+    color: black;
+}
+
+form input,
+form textarea {
+    width: 100%;
+    margin-bottom: 15px;
+}
+
+
+
+#formSec {
+    display: flex;
+    justify-content: center;
+}
+
+#formSec form {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 400px;
+}
+
+#contacto {
+    background-color: #E9B3FB;
+    padding: 40px 20px;
+    text-align: center;
+    color: #fff;
+}
+
+#contacto h1{
+    color: black;
+}
+
+#contacto h2{
+    color: black;
+}
+
+
+#theme-toggle {
+    background-color: #456882;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-bottom: 20px;
+    transition: background-color 0.3s ease;
+}
+
 .toggle-section {
     background-color: #B96AC9;
     color: #fff;
@@ -512,14 +584,14 @@ body.dark-mode .toggle-section {
 
 /* Sección extracurricular */
 #extra {
-    background-color: #E6D5F7; /* lavanda claro */
+    background-color: #E6D5F7; /* lavanda claro, distinto de cursos */
     padding: 40px 20px;
     text-align: center;
     color: #333; /* texto oscuro para contraste */
 }
 
 .extra-item {
-    background-color: #B785E8; /* morado medio */
+    background-color: #B785E8; /* morado medio, destaca sobre el fondo */
     padding: 20px;
     margin: 20px 0;
     border-radius: 10px;
@@ -534,9 +606,9 @@ body.dark-mode .toggle-section {
 
 /* Modo oscuro */
 body.dark-mode #extra {
-    background-color: #5B3178;
+    background-color: #5B3178; /* morado oscuro, diferenciado de cursos */
 }
 
 body.dark-mode .extra-item {
-    background-color: #43205B;
+    background-color: #43205B; /* más oscuro que el fondo para contraste */
 }

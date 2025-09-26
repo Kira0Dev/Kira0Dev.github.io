@@ -5,6 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Kira0Dev</title>
     <link rel="stylesheet" type="text/css" href="styles.css">
+    <script src="translations.js"></script>
+    <script src="script.js"></script>
+
 </head>
 <body>
     <header>
@@ -14,24 +17,30 @@
                 &#119064;
             </label>
             <ul class="checkop">
-                <li><a href="#inicio">Inicio</a></li>
-                <li><a href="#acerca">Acerca de mí</a></li>
-                <li><a href="#proyectos">Proyectos</a></li>
-                <li><a href="#experiencia">Experiencia</a></li>
-                <li><a href="#cursos">Cursos</a></li>
-                <li><a href="#extra">Extra</a></li>
-                <li><a href="#contacto">Contacto</a></li>
+                <li><a href="#inicio" data-translate="Inicio">Inicio</a></li>
+                <li><a href="#acerca" data-translate="Acerca">Acerca de mí</a></li>
+                <li><a href="#proyectos" data-translate="Proyectos">Proyectos</a></li>
+                <li><a href="#experiencia" data-translate="experiencia">Experiencia</a></li>
+                <li><a href="#cursos" data-translate="cursos">Cursos</a></li>
+                <li><a href="#extra" data-translate="extra">Extra</a></li>
+                <li><a href="#contacto" data-translate="Contacto">Contacto</a></li>
             </ul>
         </nav>
     </header>
     <div id="inicio">
         <section class="section-content">
             <img class="perfilPhoto" src="https://i.imgur.com/rzJ9DmA.jpeg" alt="Foto de perfil">
-        </section><button id="theme-toggle" style="margin-left: 46%; background-color: #B96AC9; color: white; border: none; padding: 10px; border-radius: 5px; cursor: pointer;">
-        Cambiar tema
-    </button>
+        </section>
+        <section style="display: flex; justify-content: center; align-items: center;">
+            <button id="theme-toggle" data-translate="themeToggle">
+                Cambiar tema
+            </button>
+        <section class="languajes">
+            <button class="toggle-section" onclick="setLanguage('es')">Español</button>
+            <button class="toggle-section" onclick="setLanguage('en')">English</button>
+        </section>
         <section class="section-content">
-            <p>
+            <p data-translate="info">
                 Erick Fabrizzio Pineda Herrera<br>
                 Ingeniero en Software<br>
                 Técnico en Programación de Software<br>
@@ -39,72 +48,72 @@
         </section>
     </div>
     <div id="acerca">
-        <h1>Bienvenido</h1>
-        <p>Soy Erick Fabrizzio Pineda Herrera, soy ingeniero en Software,<br>tengo experiencia en programación en los lenguajes: C++, Java, C# y Phyton.<br>Además de experiencia en el área backend y frontend de páginas web,<br>haciendo uso de HTML, JavaScript, PHP, CSS y JQuerry.<br>También cuento con experiencia en programación de videojuegos tanto 2D como 3D,<br>en diversas plataformas, haciendo uso de lenguajes como C++, C# y similares.<br>También tengo experiencia en bases de datos SQL y NoSQL, principalmente en herramientas como MySQL, Firebase y Xampp</p>
+        <h1 data-translate="welcome">Bienvenido</h1>
+        <p data-translate="intro">Soy Erick Fabrizzio Pineda Herrera, soy ingeniero en Software,<br>tengo experiencia en programación en los lenguajes: C++, Java, C# y Python.<br>Además de experiencia en el área backend y frontend de páginas web,<br>haciendo uso de HTML, JavaScript, PHP y CSS.<br>También cuento con experiencia en programación de videojuegos tanto 2D como 3D,<br>en diversas plataformas, haciendo uso de lenguajes como C++, C# y similares.</p>
     </div>
     <div id="proyectos">
-        <h1>Proyectos</h1>
-        <p>Algunos de los trabajos y desarrollos que he realizado.</p>
-        <button class="toggle-section" data-type="proyectos" data-target="lista-proyectos"></button>
+        <h1 data-translate="proyectosh1">Proyectos</h1>
+        <p data-translate="proyectosp">Algunos de los proyectos que he realizado.</p>
+        <button class="toggle-section" data-type="projects" data-target="lista-proyectos"></button>
 
         <div id="lista-proyectos" style="display:none;">
             <div class="project-item">
-                <h2>Videojuego Mushroom Adventure</h2>
+                <h2 data-translate="mushroomh2">Videojuego Mushroom Adventure</h2>
                 <div class="project-content">
-                    <p>Videjuego 2D de plataformas, desarrollado en GDevelop</p>
-                    <button class="ver-mas">Ver más</button>
+                    <p data-translate="mushroomp1">Videjuego 2D de plataformas, desarrollado en GDevelop</p>
+                    <button class="ver-mas" data-translate="vermas">Ver más</button>
                     <div class="project-details">
-                        <p>El videojuego hace uso de varias mecánicas, como obstáculos, enemigos que se mueven, plataformas que desaparecen, etc.<br>Una de las mayores complicaciones que tuve a la hora de desarrollar este videojuego fue el nivel del tetris, pues había que hacer que las piezas calleran al ritmo de la música, que el jugador muriera al tocarlas, hacer que estas desaparecieran y a la vez hacer que el jugador pudiera esquivarlas, sin que fuera muy sencillo.<br>Desarrollé este juego por completo usando GDevelop.</p>
+                        <p data-translate="mushroomp2">El videojuego hace uso de varias mecánicas, como obstáculos, enemigos que se mueven, plataformas que desaparecen, etc.<br>Una de las mayores complicaciones que tuve a la hora de desarrollar este videojuego fue el nivel del tetris, pues había que hacer que las piezas calleran al ritmo de la música, que el jugador muriera al tocarlas, hacer que estas desaparecieran y a la vez hacer que el jugador pudiera esquivarlas, sin que fuera muy sencillo.<br>Desarrollé este juego por completo usando GDevelop.</p>
                         <img src="https://i.imgur.com/dj26B36.png">
-                        <button class="ver-menos">Ver menos</button>
+                        <button class="ver-menos" data-translate="vermenos">Ver menos</button>
                     </div>
                 </div>
             </div>
             <div class="project-item">
-                <h2>Videojuego Cyber runner</h2>
+                <h2 data-translate="cyberh2">Videojuego Cyber runner 2077</h2>
                 <div class="project-content">
-                    <p>Videojuego 2D de plataformas, desarrollado en Unity.</p>
-                    <button class="ver-mas">Ver más</button>
+                    <p data-translate="cyberp1">Videojuego 2D de plataformas, desarrollado en Unity.</p>
+                    <button class="ver-mas" data-translate="vermas">Ver más</button>
                     <div class="project-details">
-                        <p>El videojuego hace uso de varias mecánicas, tales como enemigos, plataformas, disparos, balas que siguen al jugador, etc.<br>Uno de los retos fue calcular la velocidad, frecuencia de disparo y daño de las balas, para que el juego fuera justo para el jugador y no fuera tedioso.<br>El juego fue desarrollado en su totalidad en Unity, programando en c#</p>
+                        <p data-translate="cyber1">El videojuego hace uso de varias mecánicas, tales como enemigos, plataformas, disparos, balas que siguen al jugador, etc.<br>Uno de los retos fue calcular la velocidad, frecuencia de disparo y daño de las balas, para que el juego fuera justo para el jugador y no fuera tedioso.<br>El juego fue desarrollado en su totalidad en Unity, programando en c#</p>
                         <img src="https://i.imgur.com/dAXrwOE.png">
-                        <button class="ver-menos">Ver menos</button>
+                        <button class="ver-menos" data-translate="vermenos">Ver menos</button>
                     </div>
                 </div>
             </div>
             <div class="project-item">
-                <h2>Página web sobre la banda Pxndx<h2>
+                <h2 data-translate="pxndx1">Página web sobre la banda Pxndx<h2>
                 <div class="project-content">
-                    <p>Página web sencilla que habla sobre la banda Pxndx</p>
-                    <button class="ver-mas">Ver más</button>
+                    <p data-translate="pxndx2">Página web sencilla que habla sobre la banda Pxndx</p>
+                    <button class="ver-mas" data-translate="vermas">Ver más</button>
                     <div class="project-details">
-                        <p>Es una página web bastante sencilla que habla sobre la banda de rock-punk mexicana conocida como Pxndx, habla un poco sobre su historia y sus albumes.<br>Se realizó con HTML y CSS</p>
+                        <p data-translate="pxndx3">Es una página web bastante sencilla que habla sobre la banda de rock-punk mexicana conocida como Pxndx, habla un poco sobre su historia y sus albumes.<br>Se realizó con HTML y CSS</p>
                         <img src="https://i.imgur.com/7NjSn4e.png">
-                        <button class="ver-menos">Ver menos</button>
+                        <button class="ver-menos" data-translate="vermenos">Ver menos</button>
                     </div>
                 </div>
             </div>
             <div class="project-item">
-                <h2>Página sobre Acámbaro, Guanajuato</h2>
+                <h2 data-translate="acam1">Página sobre Acámbaro, Guanajuato</h2>
                 <div class="project-content">
-                    <p>Página web acerca de Acámbaro Guanajuato.</p>
-                    <button class="ver-mas">Ver más</button>
+                    <p data-translate="acam2">Página web acerca de Acámbaro Guanajuato.</p>
+                    <button class="ver-mas" data-translate="vermas">Ver más</button>
                     <div class="project-details">
-                        <p>Realicé una página web hablando sobre Ácambaro, Guanajuato, hablando de sus lugares turísticos, historia, sus panes, etc.<br>Esta página emplea tablas, imagenes, videos, todo haciendo uso de HTML y CSS</p>
-                        <img src="https://i.imgur.com/5SUgYY5.png">
-                        <button class="ver-menos">Ver menos</button>
+                        <p data-translate="acam3">Realicé una página web hablando sobre Ácambaro, Guanajuato, hablando de sus lugares turísticos, historia, sus panes, etc.<br>Esta página emplea tablas, imagenes, videos, todo haciendo uso de HTML y CSS</p>
+                        <img src="https://acam1i.imgur.com/5SUgYY5.png">
+                        <button class="ver-menos" data-translate="vermenos">Ver menos</button>
                     </div>
                 </div>
             </div>
             <div class="project-item">
-                <h2>Página de tienda online de la tienda "Hello, Cutie"</h2>
+                <h2 data-translate="hello1">Página de tienda online de la tienda "Hello, Cutie"</h2>
                 <div class="project-content">
-                    <p>Página web que servía como tienda online de la famosa tienda "Hello, Cutie".</p>
-                    <button class="ver-mas">Ver más</button>
+                    <p data-translate="hello2">Página web que servía como tienda online de la famosa tienda "Hello, Cutie".</p>
+                    <button class="ver-mas" data-translate="vermas">Ver más</button>
                     <div class="project-details">
-                        <p>En realidad fueron varias páginas, incluyendo una de inicio de sesión, cerrar sesión, ome page, un catálogo y una página de usuario con un carrito, así mismo se implementaron bases de datos, para los productos y sus precios y los usuarios y sus carritos.<br>Lo que realmente representó un gran reto, pues me tomé varias horas en configurar tanto el catalogo para que se viese bien, como las bases de datos.<br>Todo esto haciendo uso de HTML, CSS, PHP, JavaScript y XAMMP</p>
+                        <p data-translate="hello3">En realidad fueron varias páginas, incluyendo una de inicio de sesión, cerrar sesión, home page, un catálogo y una página de usuario con un carrito, así mismo se implementaron bases de datos, para los productos y sus precios y los usuarios y sus carritos.<br>Lo que realmente representó un gran reto, pues me tomé varias horas en configurar tanto el catalogo para que se viese bien, como las bases de datos.<br>Todo esto haciendo uso de HTML, CSS, PHP, JavaScript y XAMPP</p>
                         <img src="https://i.imgur.com/jsHuLjx.png">
-                        <button class="ver-menos">Ver menos</button>
+                        <button class="ver-menos" data-translate="vermenos">Ver menos</button>
                     </div>
                 </div>
             </div>
@@ -112,281 +121,157 @@
     </div>
 
     <div id="experiencia">
-        <h1>Experiencia Laboral</h1>
-        <p>Un resumen de mi experiencia profesional.</p>
-        <button class="toggle-section" data-type="experiencia" data-target="lista-experiencia"></button>
+        <h1 data-translate="exp1">Experiencia Laboral</h1>
+        <p data-translate="exp2">Un resumen de mi experiencia profesional.</p>
+        <button class="toggle-section" data-type="experience" data-target="lista-experiencia"></button>
         <div id="lista-experiencia" style="display:none;">
                     <div class="exp-item">
-                <h2>Espacios inmersivos TRAMVET</h2>
-                <p>Ayudé a desarrollar una plataforma de museo interactiva 3D, ayudando con la documentación, diseño, maquetado, etc.</p>
+                <h2 data-translate="tramvet1">Espacios inmersivos TRAMVET</h2>
+                <p data-translate="tramvet2">Ayudé a desarrollar una plataforma de museo interactiva 3D, ayudando con la documentación, diseño, maquetado, etc.</p>
             </div>
             <div class="exp-item">
-                <h2>P/S/L Group</h2>
-                <p>Survey Programer, programé encuestas para el área médica, haciendo uso de HTML, CSS, Java Script y JQuerry.</p>
+                <h2 data-translate="psl1">P/S/L Group</h2>
+                <p data-translate="psl2">Survey Programer, programé encuestas para el área médica, haciendo uso de HTML, CSS, Java Script y JQuerry.</p>
             </div>
         </div>
     </div>
 
     <div id="cursos">
-        <h1>Cursos y Certificados</h1>
-        <p>Una colección de cursos y certificaciones que he completado.</p>
-        <button class="toggle-section" data-type="cursos" data-target="lista-cursos"></button>
+        <h1 data-translate="cursos1">Cursos y Certificados</h1>
+        <p data-translate="cursos2">Una colección de cursos y certificaciones que he completado.</p>
+        <button class="toggle-section" data-type="courses" data-target="lista-cursos"></button>
         <div id="lista-cursos" style="display:none;">
             <div class="curso-item" class="section-hidden">
-                <h2>Pensamiento crítico y resolución de problemas</h2>
-                <p>Realicé un curso en el que obtuve herramientas que me ayudan a analizar mejor los problemas y verlos desde diferentes puntos de vista.</p>
+                <h2 data-translate="curso1">Pensamiento crítico y resolución de problemas</h2>
+                <p data-translate="curso2">Realicé un curso en el que obtuve herramientas que me ayudan a analizar mejor los problemas y verlos desde diferentes puntos de vista.</p>
                 <img src="https://i.imgur.com/DNhG7AN.jpeg">
             </div>
             <div class="curso-item">
-                <h2>Business English</h2>
-                <p>Un curso en el que practiqué mi listening y aprendí frases y terminología usada en el área de los negocios.</p>
+                <h2 data-translate="curso3">Business English</h2>
+                <p data-translate="curso4">Un curso en el que practiqué mi listening y aprendí frases y terminología usada en el área de los negocios.</p>
                 <img src="https://i.imgur.com/CBmDlV2.jpeg">
             </div>
             <div class="curso-item">
-                <h2>Gestión de proyectos y fundamentos de metodología Agile</h2>
-                <p>Un curso en el que aprendí diversos enfoques y estrategias a la hora de gestionar y liderar proyectos, así como un inicio a lo que es la metodología Agile</p>
+                <h2 data-translate="curso5">Gestión de proyectos y fundamentos de metodología Agile</h2>
+                <p data-translate="curso6">Un curso en el que aprendí diversos enfoques y estrategias a la hora de gestionar y liderar proyectos, así como un inicio a lo que es la metodología Agile</p>
                 <img src="https://i.imgur.com/fLZ2f6f.jpegb">
             </div>
             <div class="curso-item">
-                <h2>Introducción a la ciencia de datos</h2>
-                <p>Una breve introducción al manejo, obtención y análisis de datos.</p>
+                <h2 data-translate="curso7">Introducción a la ciencia de datos</h2>
+                <p data-translate="curso8">Una breve introducción al manejo, obtención y análisis de datos.</p>
                 <img src="https://i.imgur.com/OC3bT1N.jpeg">
             </div>
             <div class="curso-item">
-                <h2>JavaScript TOTAL</h2>
-                <p>Un curso de 26.5 horas sobre JavaScript en el que se veían temas desde lo básico para páginas web y JQuerry, hasta llegar a ver un poco de JSON y peticiones HTTP</p>
+                <h2 data-translate="curso9">JavaScript TOTAL</h2>
+                <p data-translate="curso10">Un curso de 26.5 horas sobre JavaScript en el que se veían temas desde lo básico para páginas web y JQuerry, hasta llegar a ver un poco de JSON y peticiones HTTP</p>
                 <img src="https://i.imgur.com/Uap8Iiu.jpeg">
             </div>
             <div class="curso-item">
-                <h2>Python Total</h2>
-                <p>Un curso de 30.5 horas en el que aprendí a utilizar Python, desde programas sencillos como calculadoras, pasando por un videojuego sencillo, hasta llegar a ver pandas en google collabs.</p>
+                <h2 data-translate="curso11">Python Total</h2>
+                <p data-translate="curso12">Un curso de 30.5 horas en el que aprendí a utilizar Python, desde programas sencillos como calculadoras, pasando por un videojuego sencillo, hasta llegar a ver pandas en google collabs.</p>
                 <img src="https://i.imgur.com/MyJ4ijh.jpeg">
             </div>
             <div class="curso-item">
-                <h2>Agile leadership, introduction to change</h2>
-                <p>Un curso en el que aprendí los conceptos clave de la metodología Agile y cómo hacer cambios a esta metodología.</p>
+                <h2 data-translate="curso13">Agile leadership, introduction to change</h2>
+                <p data-translate="curso14">Un curso en el que aprendí los conceptos clave de la metodología Agile y cómo hacer cambios a esta metodología.</p>
                 <img src="https://i.imgur.com/DGjIwsV.jpeg">
             </div>
             <div class="curso-item">
-                <h2>Agile Organization</h2>
-                <p>Un curso en el que aprendí los conceptos base de las organizaciones Agile.</p>
+                <h2 data-translate="curso15">Agile Organization</h2>
+                <p data-translate="curso16">Un curso en el que aprendí los conceptos base de las organizaciones Agile.</p>
                 <img src="https://i.imgur.com/QOgKd9i.jpeg">
             </div>
             <div class="curso-item">
-                <h2>Agile Leader Training</h2>
-                <p>Un curso en el que aprendí cómo ser un buen líder Agile y cómo facilitar la transición a esta metodología.</p>
+                <h2 data-translate="curso17">Agile Leader Training</h2>
+                <p data-translate="curso18">Un curso en el que aprendí cómo ser un buen líder Agile y cómo facilitar la transición a esta metodología.</p>
                 <img src="https://i.imgur.com/t11VrCD.jpeg">
             </div>
             <div class="curso-item">
-                <h2>Agile Leadership Capstone</h2>
-                <p>En este curso apliqué el cambio, desde personalmente, hasta una propuesta ficticia para una empresa.</p>
+                <h2 data-translate="curso19">Agile Leadership Capstone</h2>
+                <p data-translate="curso20">En este curso apliqué el cambio, desde personalmente, hasta una propuesta ficticia para una empresa.</p>
                 <img src="https://i.imgur.com/o4l7sDI.jpeg">
             </div>
             <div class="curso-item">
-                <h2>Developing an Agile Team</h2>
-                <p>El último curso de metodología Agile, en el que aprendí a cómo manejar a un equipo usando esta metodología, para mejorar la eficiencia y el ambiente laboral.</p>
+                <h2 data-translate="curso21">Developing an Agile Team</h2>
+                <p data-translate="curso22">El último curso de metodología Agile, en el que aprendí a cómo manejar a un equipo usando esta metodología, para mejorar la eficiencia y el ambiente laboral.</p>
                 <img src="https://i.imgur.com/X48iQit.jpeg">
             </div>
             <div class="curso-item">
-                <h2>Universidades Anticorrupción</h2>
-                <p>Participación en el curso Universidades Anticorrupción.</p>
+                <h2 data-translate="curso23">Universidades Anticorrupción</h2>
+                <p data-translate="curso24">Participación en el curso Universidades Anticorrupción.</p>
                 <img src="https://i.imgur.com/GtWxTZk.jpeg">
             </div>
             <div class="curso-item">
-                <h2>Curso Prevención de incendios</h2>
-                <p>Un curso en el que aprendí a prevenir incendios y a cómo actuar en caso de uno.</p>
+                <h2 data-translate="curso25">Curso Prevención de incendios</h2>
+                <p data-translate="curso26">Un curso en el que aprendí a prevenir incendios y a cómo actuar en caso de uno.</p>
                 <img src="https://i.imgur.com/fT8tJYb.jpeg">
             </div>
             <div class="curso-item">
-                <h2>Curso Primeros Auxilios</h2>
-                <p>Un curso en el que aprendí a dar primeros auxilios a cómo actuar en caso de emergencias.</p>
+                <h2 data-translate="curso27">Curso Primeros Auxilios</h2>
+                <p data-translate="curso28">Un curso en el que aprendí a dar primeros auxilios a cómo actuar en caso de emergencias.</p>
                 <img src="https://i.imgur.com/8Xu58fd.jpeg">
             </div>
             <div class="curso-item">
-                <h2>Participación en el primer coloquio de tecnología y humanidades</h2>
-                <p>Participé como ponente en el primer coloquio de tecnología y humanidades en mi universidad, hablando sobre el tema: "El impacto de las redes sociales en la capacidad de retención de atención e información de los jóvenes".</p>
+                <h2 data-translate="curso29">Participación en el primer coloquio de tecnología y humanidades</h2>
+                <p data-translate="curso30">Participé como ponente en el primer coloquio de tecnología y humanidades en mi universidad, hablando sobre el tema: "El impacto de las redes sociales en la capacidad de retención de atención e información de los jóvenes".</p>
                 <img src="https://i.imgur.com/jI9w0QS.png">
             </div>
         </div>
     </div>
 
     <div id="extra">
-        <h1>Extra curricular</h1>
-        <p>Actividades que suelo realizar, fuera del ámbito laboral</p>
-        <button class="toggle-section" data-type="Actividades" data-target="lista-extra"></button>
+        <h1 data-translate="extra1">Extra curricular</h1>
+        <p data-translate="extra2">Actividades que suelo realizar, fuera del ámbito laboral</p>
+        <button class="toggle-section" data-type="activities" data-target="lista-extra"></button>
         <div id="lista-extra" style="display:none;">
             <div class="extra-item" class="section-hidden">
-                <h2>Actividades ambientales</h2>
-                <p>Participación en reforestación en área natural protegida en Juriquilla. 27-mayo-2023.<br>Participación en el área de cultura verde de mi universidad, he ayudado a mantener las áreas verdes de mi universidad, asi como en áreas de reciclaje.</p>
+                <h2 data-translate="extra3">Actividades ambientales</h2>
+                <p data-translate="extra4">Participación en reforestación en área natural protegida en Juriquilla. 27-mayo-2023.<br>Participación en el área de cultura verde de mi universidad, he ayudado a mantener las áreas verdes de mi universidad, asi como en áreas de reciclaje.</p>
             </div>
             <div class="extra-item" class="section-hidden">
-                <h2>Donación de sangre</h2>
-                <p>Participación en campaña de donación de sangre. 30-octubre-2024 y 28-febrero-2024.</p>
+                <h2 data-translate="extra5">Donación de sangre</h2>
+                <p data-translate="extra6">Participación en campaña de donación de sangre. 30-octubre-2024 y 28-febrero-2024.</p>
             </div>
             <div class="extra-item" class="section-hidden">
-                <h2>Ponente</h2>
-                <p>Participación como ponente en un coloquio de humanidades y tecnología. 20-noviembre-2024.</p>
+                <h2 data-translate="extra7">Ponente</h2>
+                <p data-translate="extra8">Participación como ponente en un coloquio de humanidades y tecnología. 20-noviembre-2024.</p>
             </div>
             <div class="extra-item" class="section-hidden">
-                <h2>Pasión por la escritura</h2>
-                <p>Me apasiona la escritura de historias, así como la lectura de libros.</p>
+                <h2 data-translate="extra9">Pasión por la escritura</h2>
+                <p data-translate="extra10">Me apasiona la escritura de historias, así como la lectura de libros.</p>
             </div>
         </div>
     </div>
 
-
-
     <div id="contacto">
-        <h1>Contacto</h1>
-        <p>Si te llamó la antención mi portafolio y gustas comunicarte conmigo, puedes hacer a través de los siguientes medios:</p>
-        <p>Instagram: <a href="https://www.instagram.com/erickherrera77/">erickherrera77</a></p>
-        <p>Github: <a href="https://github.com/Kira0Dev">Kira0Dev</a></p>
-        <p>Correo: <a href="mailto:erifabrizz@gmail.com">erifabrizz@gmail.com</a></p>
-        <p>Linkedin: <a href="https://www.linkedin.com/in/erick-pineda-3b1587310">Erick Pineda</a></p>
-        <p>Itch.io: <a href="https://kiradev89.itch.io/">KiraDev89</a></p>
-        <p>Estaré encantado de ponerme en contacto contigo</p>
+        <h1 data-translate="message1">Envíame un mensaje</h1>
+        <h2 data-translate="message2">Me pondré en contacto contigo  lo más pronto posible.</h2>
+        <section id="formSec">
+            <form action="https://formsubmit.co/erifabrizz07@gmail.com" method="POST">
+                <label data-translate="message3">Correo:</label><br>
+                <input type="email" name="email" required placeholder="ejemplo@mail.com"><br><br>
+
+                <label data-translate="message4">Mensaje:</label><br>
+                <textarea name="message" required placeholder="Tu mensaje aquí. / your message here."></textarea><br><br>
+
+                <button type="submit" data-translate="message5">Enviar</button>
+            </form>
+        </section>
     </div>
-    <script>
-        document.addEventListener('DOMContentLoaded', function() {
-            const verMasButtons = document.querySelectorAll('.ver-mas');
-            const verMenosButtons = document.querySelectorAll('.ver-menos');
 
-            verMasButtons.forEach(button => {
-                button.addEventListener('click', function() {
-                    const projectDetails = this.nextElementSibling;
-                    projectDetails.style.display = "block";
-                    this.style.display = "none";
-                });
-            });
 
-            verMenosButtons.forEach(button => {
-                button.addEventListener('click', function() {
-                    const projectDetails = this.parentElement;
-                    projectDetails.style.display = "none";
-                    projectDetails.previousElementSibling.style.display = "inline";
-                });
-            });
-        });
-    </script>
-
-    <script>
-    document.addEventListener('DOMContentLoaded', () => {
-        const themeToggle = document.getElementById('theme-toggle');
-        const body = document.body;
-
-        // Cargar tema guardado en localStorage
-        const savedTheme = localStorage.getItem('theme');
-        if (savedTheme === 'dark') {
-            body.classList.add('dark-mode');
-            themeToggle.textContent = 'Tema claro';
-        }
-
-        // Alternar tema
-        themeToggle.addEventListener('click', () => {
-            body.classList.toggle('dark-mode');
-            if (body.classList.contains('dark-mode')) {
-                themeToggle.textContent = 'Tema claro';
-                localStorage.setItem('theme', 'dark');
-            } else {
-                themeToggle.textContent = 'Tema oscuro';
-                localStorage.setItem('theme', 'light');
-            }
-        });
-    });
-</script>
-
-<script>
-    document.addEventListener('DOMContentLoaded', () => {
-        const sections = document.querySelectorAll('div[id]');
-        const navLinks = document.querySelectorAll('nav ul li a');
-
-        const setActiveLink = () => {
-            let currentSection = null;
-
-            sections.forEach((section) => {
-                const sectionTop = section.offsetTop - 100; // Ajuste para el desplazamiento
-                if (window.scrollY >= sectionTop) {
-                    currentSection = section.id;
-                }
-            });
-
-            navLinks.forEach((link) => {
-                link.classList.remove('active');
-                if (currentSection && link.getAttribute('href').includes(currentSection)) {
-                    link.classList.add('active');
-                }
-            });
-        };
-
-        // Escuchar eventos de scroll
-        window.addEventListener('scroll', setActiveLink);
-
-        // Activar la sección correcta al cargar la página
-        setActiveLink();
-    });
-</script>
-
-<script>
-    document.addEventListener('DOMContentLoaded', () => {
-        const projectItems = document.querySelectorAll('.project-item');
-
-        const observer = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    entry.target.classList.add('visible');
-                }
-            });
-        }, { threshold: 0.1 }); // Se activa cuando el 10% del elemento es visible
-
-        projectItems.forEach(item => observer.observe(item));
-    });
-</script>
-
-<script>
-document.addEventListener('DOMContentLoaded', () => {
-    // --- Botones globales para mostrar/ocultar secciones enteras ---
-    const toggleButtons = document.querySelectorAll('.toggle-section');
-
-    toggleButtons.forEach(button => {
-        const sectionType = button.dataset.type; // 'cursos', 'experiencia', etc.
-        const targetId = button.dataset.target;
-        const target = document.getElementById(targetId);
-
-        // Texto inicial
-        button.textContent = `Ver ${sectionType}`;
-
-        button.addEventListener('click', () => {
-            if (target.style.display === "block") {
-                target.style.display = "none";
-                button.textContent = `Ver ${sectionType}`;
-            } else {
-                target.style.display = "block";
-                button.textContent = `Esconder ${sectionType}`;
-            }
-        });
-    });
-
-    // --- Botones internos de proyectos ---
-    document.querySelectorAll('.ver-mas').forEach(button => {
-        button.addEventListener('click', () => {
-            const details = button.nextElementSibling;
-            details.style.display = 'block';
-        });
-    });
-
-    document.querySelectorAll('.ver-menos').forEach(button => {
-        button.addEventListener('click', () => {
-            const details = button.parentElement;
-            details.style.display = 'none';
-        });
-    });
-});
-</script>
-
+    <div id="links">
+        <h1 data-translate="contacto1">Contacto</h1>
+        <p data-translate="contacto2">Si te llamó la antención mi portafolio y gustas comunicarte conmigo, puedes hacer a través de los siguientes medios:</p>
+        <p data-translate="contacto3">Instagram: <a href="https://www.instagram.com/erickherrera77/">erickherrera77</a></p>
+        <p data-translate="contacto4">Github: <a href="https://github.com/Kira0Dev">Kira0Dev</a></p>
+        <p data-translate="contacto5">Correo: <a href="mailto:erifabrizz@gmail.com">erifabrizz@gmail.com</a></p>
+        <p data-translate="contacto6">Linkedin: <a href="https://www.linkedin.com/in/erick-pineda-3b1587310">Erick Pineda</a></p>
+        <p data-translate="contacto7">Itch.io: <a href="https://kiradev89.itch.io/">KiraDev89</a></p>
+        <p data-translate="contacto8">Estaré encantado de ponerme en contacto contigo</p>
+    </div>
     
 
 
 </body>
 </html>
-
-
