@@ -4,18 +4,20 @@ const sectionNames = {
     es: {
         projects: "Proyectos",
         experience: "Experiencia",
+        exchanges: "Intercambio",
         courses: "Cursos",
         activities: "Actividades"
     },
     en: {
         projects: "Projects",
         experience: "Experience",
+        exchanges: "Intercambio",
         courses: "Courses",
         activities: "Activities"
     }
 };
 
-// --- Mostrar/Ocultar detalles de proyectos ---
+// --- Show/hide ---
 function initProjectDetails() {
     const verMasButtons = document.querySelectorAll('.ver-mas');
     const verMenosButtons = document.querySelectorAll('.ver-menos');
@@ -32,15 +34,15 @@ function initProjectDetails() {
         button.addEventListener('click', () => {
             const details = button.parentElement;
             details.style.display = "none";
-            details.previousElementSibling.style.display = "inline";
+            details.previousElementSibling.style.display = "inline-block";
         });
     });
 }
 
-// --- Alternar tema claro/oscuro ---
+// --- Light/Dark modes ---
 function initThemeToggle() {
     const themeToggle = document.getElementById('theme-toggle');
-    if (!themeToggle) return; // Evita errores si no existe el botón
+    if (!themeToggle) return; 
 
     const body = document.body;
     const savedTheme = localStorage.getItem('theme');
@@ -72,10 +74,10 @@ function initThemeToggle() {
     });
 }
 
-// --- Resaltar sección activa en el menú ---
+// --- Highlight active sections ---
 function initActiveSectionHighlight() {
     const sections = document.querySelectorAll('div[id]');
-    const navLinks = document.querySelectorAll('nav ul li a');
+    const navLinks = document.querySelectorAll('.nav-link');
 
     const setActiveLink = () => {
         let currentSection = null;
@@ -96,12 +98,12 @@ function initActiveSectionHighlight() {
     };
 
     window.addEventListener('scroll', setActiveLink);
-    setActiveLink(); // Ejecutar al cargar
+    setActiveLink(); 
 }
 
-// --- Animaciones al hacer scroll ---
+// --- Scroll---
 function initScrollAnimations() {
-    const projectItems = document.querySelectorAll('.project-item');
+    const animatedItems = document.querySelectorAll('.card, .exp-item');
 
     const observer = new IntersectionObserver((entries) => {
         entries.forEach(entry => {
@@ -111,10 +113,10 @@ function initScrollAnimations() {
         });
     }, { threshold: 0.1 });
 
-    projectItems.forEach(item => observer.observe(item));
+    animatedItems.forEach(item => observer.observe(item));
 }
 
-// --- Mostrar/Ocultar secciones enteras ---
+// --- Show/Hide sections ---
 function initToggleSections() {
     const toggleButtons = document.querySelectorAll('.toggle-section');
 
@@ -125,24 +127,25 @@ function initToggleSections() {
 
         if (!target) return;
 
-        // Texto inicial
         button.textContent = currentLanguage === 'es'
             ? `Ver ${sectionNames.es[sectionType]}`
             : `Show ${sectionNames.en[sectionType]}`;
 
         button.addEventListener('click', () => {
-            if (target.style.display === "block") {
+            if (target.style.display === "flex" || target.style.display === "block" || target.style.display === "") {
                 target.style.display = "none";
                 button.textContent = currentLanguage === 'es'
                     ? `Ver ${sectionNames.es[sectionType]}`
                     : `Show ${sectionNames.en[sectionType]}`;
             } else {
-                target.style.display = "block";
+                target.style.display = "flex";
                 button.textContent = currentLanguage === 'es'
                     ? `Esconder ${sectionNames.es[sectionType]}`
                     : `Hide ${sectionNames.en[sectionType]}`;
             }
         });
+        // Hide by default
+        target.style.display = "none";
     });
 }
 
@@ -157,7 +160,7 @@ function updateToggleSectionButtons() {
         if (!target) return;
 
         const sectionName = sectionNames[currentLanguage][sectionType];
-        const isVisible = target.style.display === "block";
+        const isVisible = target.style.display === "flex" || target.style.display === "block";
 
         if (isVisible) {
             button.textContent = currentLanguage === 'es'
@@ -171,8 +174,7 @@ function updateToggleSectionButtons() {
     });
 }
 
-
-// --- Cambio de idioma ---
+// --- Languaje change ---
 function setLanguage(lang) {
     currentLanguage = lang;
     document.querySelectorAll("[data-translate]").forEach(element => {
@@ -184,7 +186,7 @@ function setLanguage(lang) {
     updateToggleSectionButtons();
 }
 
-// --- Inicialización principal ---
+// --- Init ---
 document.addEventListener('DOMContentLoaded', () => {
     initProjectDetails();
     initThemeToggle();
