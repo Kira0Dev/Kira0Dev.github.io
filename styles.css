@@ -1,4 +1,4 @@
-/* Estilos generales */
+/* General */
 html {
     scroll-behavior: smooth;
 }
@@ -6,609 +6,150 @@ html {
 body {
     background-color: #ADB9E3;
     font-family: Century Schoolbook, serif;
-    margin: 0;
-    padding: 0;
 }
 
-body, p, a, header, .project-item, .ver-mas, .ver-menos {
+/* Dark Mode transition */
+body, p, a, header, .card, .ver-mas, .ver-menos, .btn {
     transition: background-color 0.3s ease, color 0.3s ease;
 }
 
-
-
-/* Tema oscuro */
-body.dark-mode {
-    background-color: #003161;
-}
-
-/* Cambia colores de enlaces, botones y otros elementos */
-body.dark-mode a {
-    color: #FFD2FC;
-}
-
-body.dark-mode p {
-    color: #E2DFD0;
-}
-
-body.dark-mode #acerca {
-    background-color: #4F1787;
-}
-
-body.dark-mode #proyectos {
-    background-color: #433D8B;
-}
-
-body.dark-mode .ver-mas, 
-body.dark-mode .ver-menos {
-    background-color: #333;
-    color: #FFD2FC;
-}
-
-body.dark-mode header {
-    background-color: #444;
-}
-
-body.dark-mode .project-item {
-    background-color: #555;
-}
-
-
-label {
-    display: none;
-}
-
-header {
-    background-color: #A379C9;
-    color: #fff;
-    padding: 10px 20px;
-    position: fixed;
-    top: 0;
-    width: 100%;
-    z-index: 1000;
-    display: flex;
-    justify-content: center;
-    margin-bottom: 20px;
-}
-
-#check {
-    display: none;
-}
-
-nav ul {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-}
-
-nav ul li {
-    display: inline;
-    margin-right: 30px;
-}
-
-nav ul li a {
-    color: #fff;
-    text-decoration: none;
-    font-weight: bold;
-    font-size: 20px;
-}
-
-
-nav ul li a.active {
-    border-bottom: 2px solid #FFD2FC;
-    color: #FFD2FC;
-}
-
-
 .perfilPhoto {
-    margin-top: 70px;
-    width: 20%;
-    border-radius: 50%;
     border: 5px solid #FFD2FC;
 }
 
-section {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    margin: 20px 0;
-}
-
-.section-content {
-    text-align: center;
-}
-
-p {
-    font-size: 18px;
-    line-height: 1.8;
-    color: #333;
-}
-
-#inicio p {
-    text-align: center;
-}
-
+/*Colors*/
 #proyectos {
-    background-color: #ADB9E3;
-    padding: 40px 20px;
+    background-color: #ADB9E3 !important;
     color: #fff;
-    text-align: center;
 }
 
 #acerca, #links {
-    background-color: #9F86C0;
-    padding: 40px 20px;
+    background-color: #9F86C0 !important;
     color: #fff;
-    text-align: center;
 }
 
-#acerca h1, #proyectos h1, #links h1 {
-    color: #FFD2FC;
+#experiencia {
+    background-color: #8AAAE5 !important;
+    color: #fff;
 }
 
-.languajes {
-    flex-direction: column;
-    align-items: center;
+#cursos {
+    background-color: #C19EE0 !important;
+    color: #fff;
 }
 
-.project-content {
-    display: flex;
-    align-items: center;
-    flex-direction: column;
+#extra {
+    background-color: #E6D5F7 !important;
+    color: #333;
 }
 
-.project-content img {
-    width: 50%;
+#contacto {
+    background-color: #E9B3FB !important;
+    color: #fff;
 }
 
-.project-item {
+/*Titles*/
+#acerca h1, #proyectos h1, #links h1, #contacto h1, #contacto h2 {
+    color: #FFD2FC !important;
+}
+#contacto h1, #contacto h2 {
+    color: black !important;
+}
+
+/* Secctions Elements */
+#proyectos .card {
     background-color: #E980FC;
-    padding: 20px;
-    margin: 20px 0;
-    border-radius: 10px;
+    border: none;
 }
-
-.project-item h2 {
+#proyectos .card h5 {
     color: #B96AC9;
 }
-
-.project-item p {
+#proyectos .card p {
     color: #fff;
 }
 
-#links p {
-    font-size: 20px;
+/*Dark mode*/
+body.dark-mode #contacto h1,body.dark-mode #contacto h2 {
+    color: #E2DFD0 !important;
 }
 
-#links a {
+body.dark-mode {
+    background-color: #003161 !important;
+}
+body.dark-mode a {
     color: #FFD2FC;
-    font-weight: bold;
-    text-decoration: none;
+}
+body.dark-mode p, body.dark-mode h1, body.dark-mode h2, body.dark-mode h3, body.dark-mode h5 {
+    color: #E2DFD0 !important;
+}
+body.dark-mode #acerca {
+    background-color: #4F1787 !important;
+}
+body.dark-mode #proyectos {
+    background-color: #433D8B !important;
+}
+body.dark-mode #experiencia {
+    background-color: #1B3B6F !important;
+}
+body.dark-mode #experiencia .bg-light {
+    background-color: #274690 !important;
+    border-color: #274690 !important;
+}
+body.dark-mode #cursos {
+    background-color: #4C1C6F !important;
+}
+body.dark-mode #cursos .card {
+    background-color: #371257 !important;
+    border: none;
+}
+body.dark-mode #extra {
+    background-color: #5B3178 !important;
+}
+body.dark-mode #extra .bg-light {
+    background-color: #43205B !important;
+    border-color: #43205B !important;
+}
+body.dark-mode #contacto, body.dark-mode #contacto .card {
+    background-color: #2C1844 !important;
+}
+body.dark-mode .navbar {
+    background-color: #444 !important;
+}
+body.dark-mode #proyectos .card {
+    background-color: #555 !important;
 }
 
-/* Estilos para el botón "Ver más" y "Ver menos" */
-.ver-mas, .ver-menos {
+/* Buttons and links */
+.nav-link.active {
+    border-bottom: 2px solid #FFD2FC;
+    color: #FFD2FC !important;
+}
+
+.ver-mas, .ver-menos, .toggle-section {
     background-color: #B96AC9;
     color: #fff;
     border: none;
-    padding: 10px 20px;
-    font-size: 16px;
-    border-radius: 5px;
-    cursor: pointer;
-    margin-top: 10px;
     box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
 }
 
-.ver-mas:hover, .ver-menos:hover {
+.ver-mas:hover, .ver-menos:hover, .toggle-section:hover {
     background-color: #FFD2FC;
     color: #333;
 }
 
-/* Ocultar detalles de proyectos por defecto */
-.project-details {
-    display: none;
+body.dark-mode .ver-mas, body.dark-mode .ver-menos, body.dark-mode .toggle-section {
+    background-color: #333;
+    color: #FFD2FC;
 }
 
-/* Estilos para tabletas */
-@media (max-width: 768px) {
-    nav {
-        height: 50px;
-    }
-
-    nav label {
-        margin-top: -15px;
-    }
-
-    .checkop {
-        position: fixed;
-        width: 50vw;
-        height: 100vh;
-        background-color: whitesmoke;
-        margin-top: 55px;
-        text-align: center;
-        right: -100%;
-        transition: all .5s;
-    }
-
-    nav .checkop {
-        margin-left: -10%;
-    }
-
-    nav .checkop li {
-        display: block;
-        margin: 50px 0;
-        line-height: 30px;
-    }
-
-    nav .checkop li a {
-        color: black;
-        font-size: 20px;
-        text-transform: uppercase;
-        padding: 50px;
-    }
-
-    nav .checkop li a h2 {
-        font-size: 20px;
-    }
-
-    .checkbtn {
-        font-size: 30px;
-        color: white;
-        float: right;
-        line-height: 80px;
-        margin-right: 40px;
-        cursor: pointer;
-        display: block;
-    }
-
-    #check {
-        display: none;
-    }
-
-    #check:checked ~ ul {
-        right: 0;
-    }
-
-    header {
-        padding: 5px;
-    }
-
-    nav ul {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    nav ul li {
-        margin-right: 0;
-        margin-bottom: 5px;
-    }
-
-    nav ul li a {
-        font-size: 16px;
-    }
-
-    .perfilPhoto {
-        width: 30%;
-    }
-
-    .project-content {
-        flex-direction: column;
-    }
-
-    .project-content img {
-        width: 70%;
-    }
-}
-
-/* Estilos para móviles */
-@media (max-width: 480px) {
-    nav {
-        height: 50px;
-    }
-
-    nav label {
-        margin-top: -15px;
-    }
-
-    .checkop {
-        position: fixed;
-        width: 50vw;
-        height: 100vh;
-        background-color: whitesmoke;
-        margin-top: 55px;
-        text-align: center;
-        right: -100%;
-        transition: all .5s;
-    }
-
-    nav .checkop {
-        margin-left: -10%;
-    }
-
-    nav .checkop li {
-        display: block;
-        margin: 50px 0;
-        line-height: 30px;
-    }
-
-    nav .checkop li a {
-        color: black;
-        font-size: 20px;
-        text-transform: uppercase;
-        padding: 50px;
-    }
-
-    nav .checkop li a h2 {
-        font-size: 20px;
-    }
-
-    .checkbtn {
-        font-size: 30px;
-        color: white;
-        float: right;
-        line-height: 80px;
-        margin-right: 40px;
-        cursor: pointer;
-        display: block;
-    }
-
-    #check {
-        display: none;
-    }
-
-    #check:checked ~ ul {
-        right: 0;
-    }
-
-    header {
-        padding: 5px;
-    }
-
-    nav ul {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    nav ul li {
-        margin-right: 0;
-        margin-bottom: 5px;
-    }
-
-    nav ul li a {
-        font-size: 16px;
-    }
-
-    .perfilPhoto {
-        width: 50%;
-    }
-
-    section {
-        margin: 10px 0;
-    }
-
-    .project-content img {
-        width: 90%;
-    }
-
-    .project-item {
-        padding: 10px;
-        margin: 10px 0;
-    }
-
-    p {
-        font-size: 16px;
-    }
-
-    #links p {
-        font-size: 18px;
-    }
-}
-
-@keyframes fadeInUp {
-    from {
-        opacity: 0;
-        transform: translateY(20px);
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
-
-.project-item {
+/* Scroll */
+.card, .exp-item, .curso-item {
     opacity: 0;
     transform: translateY(20px);
     transition: all 0.5s ease-in-out;
 }
 
-.project-item.visible {
+.card.visible, .exp-item.visible, .curso-item.visible {
     opacity: 1;
     transform: translateY(0);
-}
-
-/* Experiencia laboral */
-#experiencia {
-    background-color: #8AAAE5; /* distinto a proyectos */
-    padding: 40px 20px;
-    text-align: center;
-    color: #fff;
-}
-
-.exp-item {
-    background-color: #5A76B8;
-    padding: 20px;
-    margin: 20px 0;
-    border-radius: 10px;
-    color: #fff;
-}
-
-/* Cursos y certificados */
-#cursos {
-    background-color: #C19EE0;
-    padding: 40px 20px;
-    text-align: center;
-    color: #fff;
-}
-
-.curso-item {
-    background-color: #A77BCF;
-    padding: 20px;
-    margin: 20px 0;
-    border-radius: 10px;
-}
-
-.curso-item img {
-    width: 50%;
-    margin-top: 10px;
-    border-radius: 5px;
-}
-
-/* Modo oscuro para las nuevas secciones */
-body.dark-mode #experiencia {
-    background-color: #1B3B6F;
-}
-
-body.dark-mode .exp-item {
-    background-color: #274690;
-}
-
-body.dark-mode #cursos {
-    background-color: #4C1C6F;
-}
-
-body.dark-mode .curso-item {
-    background-color: #371257;
-}
-
-.section-desc {
-    font-size: 18px;
-    margin-bottom: 10px;
-    color: #f5f5f5;
-}
-
-.section-hidden {
-    display: none;
-}
-
-/* formulario */
-form button {
-    background-color: #B96AC9;
-    color: #fff;
-    border: none;
-    padding: 10px 20px;
-    font-size: 16px;
-    border-radius: 5px;
-    cursor: pointer;
-    margin-bottom: 20px;
-    transition: background-color 0.3s ease;
-    align-self: center;
-}
-
-form label {
-    display: inline;
-    color: black;
-}
-
-form input,
-form textarea {
-    width: 100%;
-    margin-bottom: 15px;
-}
-
-
-
-#formSec {
-    display: flex;
-    justify-content: center;
-}
-
-#formSec form {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    width: 400px;
-}
-
-#contacto {
-    background-color: #E9B3FB;
-    padding: 40px 20px;
-    text-align: center;
-    color: #fff;
-}
-
-#contacto h1{
-    color: black;
-}
-
-#contacto h2{
-    color: black;
-}
-
-
-#theme-toggle {
-    background-color: #456882;
-    color: #fff;
-    border: none;
-    padding: 10px 20px;
-    font-size: 16px;
-    border-radius: 5px;
-    cursor: pointer;
-    margin-bottom: 20px;
-    transition: background-color 0.3s ease;
-}
-
-.toggle-section {
-    background-color: #B96AC9;
-    color: #fff;
-    border: none;
-    padding: 10px 20px;
-    font-size: 16px;
-    border-radius: 5px;
-    cursor: pointer;
-    margin-bottom: 20px;
-    transition: background-color 0.3s ease;
-}
-
-.toggle-section:hover {
-    background-color: #FFD2FC;
-    color: #333;
-}
-
-/* Modo oscuro para botones */
-body.dark-mode .toggle-section {
-    background-color: #333;
-    color: #FFD2FC;
-}
-
-
-
-/* Sección extracurricular */
-#extra {
-    background-color: #E6D5F7; /* lavanda claro, distinto de cursos */
-    padding: 40px 20px;
-    text-align: center;
-    color: #333; /* texto oscuro para contraste */
-}
-
-.extra-item {
-    background-color: #B785E8; /* morado medio, destaca sobre el fondo */
-    padding: 20px;
-    margin: 20px 0;
-    border-radius: 10px;
-    color: #fff;
-}
-
-.extra-item img {
-    width: 50%;
-    margin-top: 10px;
-    border-radius: 5px;
-}
-
-/* Modo oscuro */
-body.dark-mode #extra {
-    background-color: #5B3178; /* morado oscuro, diferenciado de cursos */
-}
-
-body.dark-mode .extra-item {
-    background-color: #43205B; /* más oscuro que el fondo para contraste */
 }
