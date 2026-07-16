@@ -1,4 +1,85 @@
-plataformas que desaparecen, entre otras.<br>Una de las mayores complicaciones que se tuvo a la hora de desarrollar este videojuego fue un nivel que simulaba un tetris, era necesario que las piezas calleran al ritmo de la música, que el jugador muriera al tocarlas, hacer que estas desaparecieran y a la vez hacer que el jugador pudiera esquivarlas, sin que fuera muy sencillo ni muy complocado.<br>El juego se desarrolló por completo usando la herramienta GDevelop.</p>
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Kira0Dev</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="styles.css">
+    
+    <script src="translations.js" defer></script>
+    <script src="script.js" defer></script>
+</head>
+<body class="bg-light text-dark">
+
+    <header class="sticky-top shadow-sm">
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="#inicio">Kira0Dev</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav ms-auto text-center">
+                        <li class="nav-item"><a class="nav-link" href="#inicio" data-translate="Inicio">Inicio</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#acerca" data-translate="Acerca">Acerca de mí</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#proyectos" data-translate="Proyectos">Proyectos</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#experiencia" data-translate="experiencia">Experiencia</a></li>
+                      <li class="nav-item"><a class="nav-link" href="#exchange" data-translate="exchange">Intercambio</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#cursos" data-translate="cursos">Cursos</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#extra" data-translate="extra">Extra</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#contacto" data-translate="Contacto">Contacto</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <div id="inicio" class="container text-center py-5">
+        <div class="row justify-content-center align-items-center g-4">
+            <div class="col-12">
+                <img class="perfilPhoto rounded-circle img-fluid shadow" src="https://i.imgur.com/rzJ9DmA.jpeg" alt="Foto de perfil" style="max-width: 200px;">
+            </div>
+            <div class="col-12 d-flex justify-content-center gap-2">
+                <button id="theme-toggle" class="btn btn-outline-secondary" data-translate="themeToggle">Cambiar tema</button>
+                <button class="btn btn-sm btn-primary" onclick="setLanguage('es')">Español</button>
+                <button class="btn btn-sm btn-outline-primary" onclick="setLanguage('en')">English</button>
+            </div>
+            <div class="col-12">
+                <p class="lead fw-bold" data-translate="info">
+                    Erick Fabrizzio Pineda Herrera<br>
+                    <span class="text-muted fs-5">Ingeniero en Software<br>Técnico en Programación de Software</span>
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <div id="acerca" class="bg-white py-5 shadow-sm text-center">
+        <div class="container m-auto" style="max-width: 800px;">
+            <h1 class="display-5 mb-4 text-primary" data-translate="welcome">Bienvenida/o</h1>
+            <p class="fs-5 lh-lg" data-translate="intro">Erick Fabrizzio Pineda Herrera<br>Ingeniero en Software<br>Con experiencia en programación en los lenguajes: C++, Java, C# y Python.<br>Además de experiencia en el área backend y frontend de páginas web,<br>haciendo uso de herramientas como HTML, JavaScript, PHP y CSS.<br>Con experiencia en programación de videojuegos tanto 2D como 3D,<br>en diversas plataformas, haciendo uso de lenguajes como C++, C# y similares.
+</p>
+
+        </div>
+    </div>
+
+    <div id="proyectos" class="container py-5">
+        <div class="text-center mb-4">
+            <h1 class="display-5" data-translate="proyectosh1">Proyectos</h1>
+            <p class="text-muted" data-translate="proyectosp">Algunos de los proyectos que he realizado.</p>
+            <button class="btn btn-primary toggle-section" data-type="projects" data-target="lista-proyectos">Mostrar/Ocultar</button>
+        </div>
+
+        <div id="lista-proyectos" style="display:none;" class="row g-4 justify-content-center">
+            <div class="col-md-6 col-lg-4">
+                <div class="card h-100 shadow-sm">
+                    <div class="card-body d-flex flex-column">
+                        <h5 class="card-title fw-bold" data-translate="mushroomh2">Videojuego Mushroom Adventure</h5>
+                        <p class="card-text text-muted small" data-translate="mushroomp1">Videjuego 2D de plataformas, desarrollado en GDevelop</p>
+                        <button class="btn btn-sm btn-outline-secondary mt-auto ver-mas" data-translate="vermas">Ver más</button>
+                        
+                        <div class="project-details mt-3" style="display:none;">
+                            <p class="small" data-translate="mushroomp2">El videojuego hace uso de varias mecánicas, por ejemplo: obstáculos, enemigos que se mueven, plataformas que desaparecen, entre otras.<br>Una de las mayores complicaciones que se tuvo a la hora de desarrollar este videojuego fue un nivel que simulaba un tetris, era necesario que las piezas calleran al ritmo de la música, que el jugador muriera al tocarlas, hacer que estas desaparecieran y a la vez hacer que el jugador pudiera esquivarlas, sin que fuera muy sencillo ni muy complocado.<br>El juego se desarrolló por completo usando la herramienta GDevelop.</p>
                             <img src="https://i.imgur.com/dj26B36.png" class="img-fluid rounded my-2" alt="Mushroom Adventure">
                             <button class="btn btn-sm btn-secondary w-100 ver-menos" data-translate="vermenos">Ver menos</button>
                         </div>
@@ -21,7 +102,6 @@ plataformas que desaparecen, entre otras.<br>Una de las mayores complicaciones q
                     </div>
                 </div>
             </div>
-
             <div class="col-md-6 col-lg-4">
                 <div class="card h-100 shadow-sm">
                     <div class="card-body d-flex flex-column">
@@ -400,4 +480,4 @@ plataformas que desaparecen, entre otras.<br>Una de las mayores complicaciones q
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 </body>
-        </html>
+</html>
