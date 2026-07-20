@@ -110,7 +110,7 @@ const translations = {
     themeToggle: "Cambiar tema",
     info: "Erick Fabrizzio Pineda Herrera<br>Ingeniero en Software<br>Técnico en Programación de Software<br>",
     welcome: "Bienvenida/o",
-    intro: "Erick Fabrizzio Pineda Herrera<br>Ingeniero en Software<br>Con experiencia en programación en los lenguajes: C++, Java, C# y Python.<br>Además de experiencia en el área backend y frontend de páginas web,<br>haciendo uso de herramientas como HTML, JavaScript, PHP y CSS.<br>Con experiencia en programación de videojuegos tanto 2D como 3D,<br>en diversas plataformas, haciendo uso de lenguajes como C++, C# y similareas.<br>Idiomas: Español Nativo, Inglés C1 (Cambridge)",
+    intro: "Erick Fabrizzio Pineda Herrera<br>Ingeniero en Software<br>Con experiencia en programación en los lenguajes: C++, Java, C# y Python.<br>Además de experiencia en el área backend y frontend de páginas web,<br>haciendo uso de herramientas como HTML, JavaScript, PHP y CSS.<br>Con experiencia en programación de videojuegos tanto 2D como 3D,<br>en diversas plataformas, haciendo uso de lenguajes como C++, C# y similares.<br>Idiomas: Español Nativo, Inglés C1 (Cambridge)",
     proyectosh1: "Proyectos",
     proyectosp: "Algunos de los trabajos y desarrollos que he realizado.",
     mushroomh2: "Videojuego Mushroom Adventure",
