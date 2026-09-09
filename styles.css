@@ -102,12 +102,25 @@ body.dark-mode #cursos .card {
     background-color: #371257 !important;
     border: none;
 }
+/*
 body.dark-mode #extra {
     background-color: #5B3178 !important;
 }
 body.dark-mode #extra .bg-light {
     background-color: #43205B !important;
     border-color: #43205B !important;
+}
+*/
+
+/*Correction bg color for extra*/
+body.dark-mode #extra .card {
+    background-color: #43205B !important;
+    border-color: #43205B !important;
+    color: #ffffff !important;
+}
+
+body.dark-mode #extra .card .text-muted {
+    color: #d1c4e9 !important;
 }
 body.dark-mode #contacto, body.dark-mode #contacto .card {
     background-color: #2C1844 !important;
