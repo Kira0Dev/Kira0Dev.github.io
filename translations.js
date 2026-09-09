@@ -83,7 +83,7 @@ const translations = {
     extra7: "Speaker",
     extra8: "Participation as a speaker in a humanities and technology colloquium. 20-November-2024.",
     extra9: "Passion for writing",
-    extra10: "Passionate about writing stories, as well as reading books.",
+    extra10: "Passionate about writing stories, tales and letters. As well as reading books.",
     contacto1: "Contact",
     contacto2: "If my portfolio caught your attention and you would like to contact me, you can do so through the following means:",
     contacto3: "Instagram: <a href='https://www.instagram.com/erickherrera77/'>erickherrera77</a>",
