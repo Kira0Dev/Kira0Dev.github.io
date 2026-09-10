@@ -5,13 +5,15 @@ const sectionNames = {
         projects: "Proyectos",
         experience: "Experiencia",
         exchanges: "Intercambio",
+        tools: "Herramientas",
         courses: "Cursos",
         activities: "Actividades"
     },
     en: {
         projects: "Projects",
         experience: "Experience",
-        exchanges: "Intercambio",
+        exchanges: "Exchange",
+        tools: "Tools",
         courses: "Courses",
         activities: "Activities"
     }

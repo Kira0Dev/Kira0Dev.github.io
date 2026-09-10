@@ -7,6 +7,7 @@
     <title>Kira0Dev</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="styles.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.15.1/devicon.min.css">
 
     <script src="translations.js" defer></script>
     <script src="script.js" defer></script>
@@ -33,6 +34,7 @@
                                 data-translate="experiencia">Experiencia</a></li>
                         <li class="nav-item"><a class="nav-link" href="#exchange"
                                 data-translate="exchange">Intercambio</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#tools" data-translate="toolsTitle">Herramientas</a></li>
                         <li class="nav-item"><a class="nav-link" href="#cursos" data-translate="cursos">Cursos</a></li>
                         <li class="nav-item"><a class="nav-link" href="#extra" data-translate="extra">Extra</a></li>
                         <li class="nav-item"><a class="nav-link" href="#contacto" data-translate="Contacto">Contacto</a>
@@ -253,6 +255,26 @@
                     </div>
                 </div>
             </div>
+
+            <div class="col-md-6 col-lg-4">
+                <div class="card h-100 shadow-sm">
+                    <div class="card-body d-flex flex-column">
+                        <h5 class="card-title fw-bold" data-translate="GQ1">Videojuego: Grammar Quest
+                        </h5>
+                        <p class="card-text text-muted small" data-translate="GQ2">Demo desarrollada en Godot</p>
+                        <button class="btn btn-sm btn-outline-secondary mt-auto ver-mas" data-translate="vermas">Ver
+                            más</button>
+
+                        <div class="project-details mt-3" style="display:none;">
+                            <p class="small" data-translate="GQ3">Demo de un videojuego móvil desarrollada en Godot, utilizando mecánicas de juegos clásicos de rol. Con el objetivo de ayudar a los jugadores a aprender gramática en inglés.<br><a href='https://kira0dev.itch.io/grammar-quest-demo'>Demo jugable</a></p>
+                            <img src="assets/grammar_quest.png" class="img-fluid rounded my-2" alt="Grammar Quest">
+                            <button class="btn btn-sm btn-secondary w-100 ver-menos" data-translate="vermenos">Ver
+                                menos</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
         </div>
 
     </div>
@@ -284,30 +306,173 @@
         </div>
     </div>
 
-    <div id="exchange" class="container py-5">
+    <div id="exchange" class="py-5">
+        <div class="container">
+            <div class="text-center mb-4">
+                <h1 class="display-5" data-translate="exchange1">Intercambio académico en República Checa</h1>
+                <button class="btn btn-primary toggle-section" data-type="exchanges"
+                    data-target="exchange-text">Mostrar/Ocultar</button>
+            </div>
+
+            <div id="exchange-text" style="display:none;" class="row g-4">
+                <p class="text-muted" data-translate="exchange2">En 2026 tuve la maravillosa oportunidad de participar en un
+                    intercambio académico, estudiando un semestre completo en la Univerzita Tomáše Bati en Zlín, República
+                    Checa.<br>En mi intercambio continué con mis estudios en desarrollo de software, tanto en áreas que ya
+                    conocía como aquellas que no. Esto me permitió expandir mi conocimiento, aprendiendo temas que en mi
+                    universidad no se tocaron y usando enfoques a los que no estaba acostumbrado.<br>Durante este periodo el
+                    inglés fue vital, convirtiéndose temporalmente en mi idioma dominante, pues en un país donde son pocos
+                    los locales y foráneos que hablan español, dependí casi exclusivamente del inglés para moverme, tanto en
+                    el ámbito escolar como en el cotidiano y social.<br>Así mismo formé parte del programa para alumnos
+                    internacionales Erasmus, lo que, unido a las clases, me permitió interactuar con personas de todo tipo
+                    de nacionalidades, haciendo amistades al rededor del mundo. Esto me permitió intercambiar culturas con
+                    una gran cantidad de países diferentes, lo que me dio un mejor entendimiento de cada una de ellas y una
+                    visión de que, al fin y al cabo, no somos tan diferentes los unos de los otros.<br>Por todo esto, me
+                    atrevo a decir que mi intercambio no solo me favoreció academicamente, si no también al depender tanto
+                    del inglés, logré tener una confianza y fluides que no poseía antes. Esto y mis intercamcios con
+                    personas alrededor del mundo me hacen un gran candidato para entornos internacionales.</p>
+                <img src="https://i.imgur.com/2VWVRiJ.jpeg" class="card-img-top" alt="exchange">
+            </div>
+        </div>
+    </div>
+
+    <div id="tools" class="container py-5">
         <div class="text-center mb-4">
-            <h1 class="display-5" data-translate="exchange1">Intercambio académico en República Checa</h1>
-            <button class="btn btn-primary toggle-section" data-type="exchanges"
-                data-target="exchange-text">Mostrar/Ocultar</button>
+            <h1 class="display-5" data-translate="toolsTitle">Herramientas</h1>
+            <p class="text-muted mb-4" data-translate="tools">Herramientas en las que tengo experiencia</p>
+            <button class="btn btn-primary toggle-section" data-type="tools"
+                data-target="toolDiv">Mostrar/Ocultar</button>
         </div>
 
-        <div id="exchange-text" style="display:none;" class="row g-4">
-            <p class="text-muted" data-translate="exchange2">En 2026 tuve la maravillosa oportunidad de participar en un
-                intercambio académico, estudiando un semestre completo en la Univerzita Tomáše Bati en Zlín, República
-                Checa.<br>En mi intercambio continué con mis estudios en desarrollo de software, tanto en áreas que ya
-                conocía como aquellas que no. Esto me permitió expandir mi conocimiento, aprendiendo temas que en mi
-                universidad no se tocaron y usando enfoques a los que no estaba acostumbrado.<br>Durante este periodo el
-                inglés fue vital, convirtiéndose temporalmente en mi idioma dominante, pues en un país donde son pocos
-                los locales y foráneos que hablan español, dependí casi exclusivamente del inglés para moverme, tanto en
-                el ámbito escolar como en el cotidiano y social.<br>Así mismo formé parte del programa para alumnos
-                internacionales Erasmus, lo que, unido a las clases, me permitió interactuar con personas de todo tipo
-                de nacionalidades, haciendo amistades al rededor del mundo. Esto me permitió intercambiar culturas con
-                una gran cantidad de países diferentes, lo que me dio un mejor entendimiento de cada una de ellas y una
-                visión de que, al fin y al cabo, no somos tan diferentes los unos de los otros.<br>Por todo esto, me
-                atrevo a decir que mi intercambio no solo me favoreció academicamente, si no también al depender tanto
-                del inglés, logré tener una confianza y fluides que no poseía antes. Esto y mis intercamcios con
-                personas alrededor del mundo me hacen un gran candidato para entornos internacionales.</p>
-            <img src="https://i.imgur.com/2VWVRiJ.jpeg" class="card-img-top" alt="exchange">
+        <!-- Main div -->
+        <div id="toolDiv" class="row row-cols-1 row-cols-md-2 g-4 justify-content-center" style="display:none;">
+
+            <!-- Col 1: C++ -->
+            <div class="col">
+                <div class="d-flex align-items-center p-3 rounded-3 shadow-sm border bg-body">
+                    <div class="rounded-circle border border-3 border-secondary d-flex align-items-center justify-content-center flex-shrink-0 fw-bold" 
+                        style="width: 75px; height: 75px; font-size: 0.9rem;">
+                        <i class="devicon-cplusplus-plain" style="font-size: 50px;"></i>
+                    </div>
+                    <div class="ms-3">
+                        <h5 class="mb-1 fw-bold" data-translate="toolC1">Programación básica</h5>
+                        <p class="mb-0 text-muted small" data-translate="toolC2">
+                            Durante la educación en preparatoria y universidad se usarón los lenguajes C++, C# y Java para desarrollo de programas sencillos, tales como calculadoras, registradoras, principios de objetos y eventos, ventanas, estructuras de datos, hilos y árboles binarios.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Col 2: Python -->
+            <div class="col">
+                <div class="d-flex align-items-center p-3 rounded-3 shadow-sm border bg-body">
+                    <!-- Circle for icon -->
+                    <div class="rounded-circle border border-3 border-secondary d-flex align-items-center justify-content-center flex-shrink-0 fw-bold" 
+                        style="width: 75px; height: 75px; font-size: 0.9rem;">
+                        <i class="devicon-python-plain-wordmark" style="font-size: 50px;"></i>
+                    </div>
+                    <!-- Text -->
+                    <div class="ms-3">
+                        <h5 class="mb-1 fw-bold">Python</h5>
+                        <p class="mb-0 text-muted small" data-translate="toolP">
+                            Se realizó un curso de Python en udemy que abarcaba desde conceptos hasta el uso de pandas y creación de videojuegos sencillos. En la universidad se desarrolló una inteligencia artificial capaz de reconocer emociones; así como un interprete usando PLY.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Col 3: SQL -->
+            <div class="col">
+                <div class="d-flex align-items-center p-3 rounded-3 shadow-sm border bg-body">
+                    <div class="rounded-circle border border-3 border-secondary d-flex align-items-center justify-content-center flex-shrink-0 fw-bold" 
+                        style="width: 75px; height: 75px; font-size: 0.9rem;">
+                        <i class="devicon-mysql-plain-wordmark" style="font-size: 50px;"></i>
+                    </div>
+                    <div class="ms-3">
+                        <h5 class="mb-1 fw-bold">SQL</h5>
+                        <p class="mb-0 text-muted small" data-translate="toolSQL">
+                            Conocimiento en querries básicas y avanzadas, uniendo tablas, organizando y filtrando resultados y editando las vistas añadiendo más columnas o combinándolas. Uso de DBMS como MySQL y Microsoft SQL Server, así como interfaces como CMD, MySQL Workbench, SSMS, y phpMyAdmin.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Col 4: React -->
+            <div class="col">
+                <div class="d-flex align-items-center p-3 rounded-3 shadow-sm border bg-body">
+                    <div class="rounded-circle border border-3 border-secondary d-flex align-items-center justify-content-center flex-shrink-0 fw-bold" 
+                        style="width: 75px; height: 75px; font-size: 0.9rem;">
+                        <i class="devicon-react-original-wordmark" style="font-size: 50px;"></i>
+                    </div>
+                    <div class="ms-3">
+                        <h5 class="mb-1 fw-bold">React</h5>
+                        <p class="mb-0 text-muted small" data-translate="toolReact">
+                            Construcción de interfaces de usuario interactivas, consumo de APIs REST y manejo de estado. Se ha utilizado React para crear páginas web sencillas, así como para crear una aplicación móvil más avanzada (ver proyectos) usando a su vez Node.js y npm; conectándola a una base de datos en la nube (Firebase).
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Col 5: Web -->
+            <div class="col">
+                <div class="d-flex align-items-center p-3 rounded-3 shadow-sm border bg-body">
+                    <div class="rounded-circle border border-3 border-secondary d-flex align-items-center justify-content-center flex-shrink-0 fw-bold" 
+                        style="width: 75px; height: 75px; font-size: 0.9rem;">
+                        <i class="devicon-html5-plain" style="font-size: 50px;"></i>
+                    </div>
+                    <div class="ms-3">
+                        <h5 class="mb-1 fw-bold" data-translate="toolWeb1">Sitios Web</h5>
+                        <p class="mb-0 text-muted small" data-translate="toolWeb2">
+                            Construcción de sitios web básicos, usando HTML, CSS, JS y PHP. Se tiene conocimiento en herramientas más avanzadas, tales como Bootstrap y React.js.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Col 6: JS -->
+            <div class="col">
+                <div class="d-flex align-items-center p-3 rounded-3 shadow-sm border bg-body">
+                    <div class="rounded-circle border border-3 border-secondary d-flex align-items-center justify-content-center flex-shrink-0 fw-bold" 
+                        style="width: 75px; height: 75px; font-size: 0.9rem;">
+                        <i class="devicon-javascript-plain" style="font-size: 50px;"></i>
+                    </div>
+                    <div class="ms-3">
+                        <h5 class="mb-1 fw-bold">JavaScript</h5>
+                        <p class="mb-0 text-muted small" data-translate="toolJS">
+                            Conocimiento en JS para sitios web y aplicaciones con React.js; se tomó un curso en Udemy desde cero hasta pasar por JSON y peticiones con fetch. Se cuenta con experiencia laboral en P/S/L Group donde se usó bastante esta herramienta, junto HTML y Java.
+                    </div>
+                </div>
+            </div>
+
+            <!-- Col 7: VideoGames -->
+            <div class="col">
+                <div class="d-flex align-items-center p-3 rounded-3 shadow-sm border bg-body">
+                    <div class="rounded-circle border border-3 border-secondary d-flex align-items-center justify-content-center flex-shrink-0 fw-bold" 
+                        style="width: 75px; height: 75px; font-size: 0.9rem;">
+                        <i class="devicon-godot-plain-wordmark" style="font-size: 50px;"></i>
+                    </div>
+                    <div class="ms-3">
+                        <h5 class="mb-1 fw-bold" data-translate="toolVG1">Videojuegos</h5>
+                        <p class="mb-0 text-muted small" data-translate="toolVG2">
+                            Experiencia en la Construcción de videojuegos, usando Godot, Unity y GDevelop.
+                    </div>
+                </div>
+            </div>
+
+            <!-- Col 8: Cloud -->
+            <div class="col">
+                <div class="d-flex align-items-center p-3 rounded-3 shadow-sm border bg-body">
+                    <div class="rounded-circle border border-3 border-secondary d-flex align-items-center justify-content-center flex-shrink-0 fw-bold" 
+                        style="width: 75px; height: 75px; font-size: 0.9rem;">
+                        <i class="devicon-firebase-plain-wordmark" style="font-size: 50px;"></i>
+                    </div>
+                    <div class="ms-3">
+                        <h5 class="mb-1 fw-bold">Cloud</h5>
+                        <p class="mb-0 text-muted small" data-translate="toolCloud1">
+                            Uso de la nube usando bases de datos como Firebase y un poco de AWS para deployment usando AWS Amplify.
+                    </div>
+                </div>
+            </div>
+
         </div>
     </div>
 

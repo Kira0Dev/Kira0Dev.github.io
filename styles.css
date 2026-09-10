@@ -33,6 +33,11 @@ body, p, a, header, .card, .ver-mas, .ver-menos, .btn {
     color: #fff;
 }
 
+#exchange {
+    background-color: #FEC6D7 !important;
+    color: #333;
+}
+
 #cursos {
     background-color: #C19EE0 !important;
     color: #fff;
@@ -68,6 +73,8 @@ body, p, a, header, .card, .ver-mas, .ver-menos, .btn {
     color: #fff;
 }
 
+
+
 /*Dark mode*/
 body.dark-mode #contacto h1,body.dark-mode #contacto h2 {
     color: #E2DFD0 !important;
@@ -95,6 +102,15 @@ body.dark-mode #experiencia .bg-light {
     background-color: #274690 !important;
     border-color: #274690 !important;
 }
+
+body.dark-mode #exchange {
+    background-color: #80609D !important;
+}
+
+body.dark-mode #tools .bg-body{
+    background-color: #956FB6 !important
+}
+
 body.dark-mode #cursos {
     background-color: #4C1C6F !important;
 }
