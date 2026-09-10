@@ -16,6 +16,14 @@ p.small {
     font-size: 1.1rem !important; 
 }
 
+#tools h4, #cursos h4 {
+    color: #5e2129;
+}
+
+#extra h4 {
+    color: #003161;
+}
+
 /* Dark Mode transition */
 body, p, a, header, .card, .ver-mas, .ver-menos, .btn {
     transition: background-color 0.3s ease, color 0.3s ease;
@@ -75,7 +83,7 @@ body, p, a, header, .card, .ver-mas, .ver-menos, .btn {
     border: none;
 }
 #proyectos .card h4 {
-    color: #B96AC9;
+    color: #edf383;
 }
 #proyectos .card p {
     color: #fff;
@@ -94,9 +102,26 @@ body.dark-mode {
 body.dark-mode a {
     color: #FFD2FC;
 }
-body.dark-mode p, body.dark-mode h1, body.dark-mode h2, body.dark-mode h3, body.dark-mode h4 {
+body.dark-mode p, body.dark-mode h1, body.dark-mode h2, body.dark-mode h3 {
     color: #E2DFD0 !important;
 }
+
+body.dark-mode h4 {
+    color: #446cc9 !important;
+}
+
+body.dark-mode #tools h4 {
+    color: #f7f6a9 !important;
+}
+
+body.dark-mode #extra h4 {
+    color: #faafea !important;
+}
+
+body.dark-mode #experiencia h3 {
+    color: #b0faaf !important;
+}
+
 body.dark-mode #acerca {
     background-color: #4F1787 !important;
 }
