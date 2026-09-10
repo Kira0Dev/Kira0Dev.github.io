@@ -8,6 +8,14 @@ body {
     font-family: Century Schoolbook, serif;
 }
 
+p {
+    font-size: 1.2rem; 
+}
+
+p.small {
+    font-size: 1.1rem !important; 
+}
+
 /* Dark Mode transition */
 body, p, a, header, .card, .ver-mas, .ver-menos, .btn {
     transition: background-color 0.3s ease, color 0.3s ease;
@@ -66,7 +74,7 @@ body, p, a, header, .card, .ver-mas, .ver-menos, .btn {
     background-color: #E980FC;
     border: none;
 }
-#proyectos .card h5 {
+#proyectos .card h4 {
     color: #B96AC9;
 }
 #proyectos .card p {
@@ -86,7 +94,7 @@ body.dark-mode {
 body.dark-mode a {
     color: #FFD2FC;
 }
-body.dark-mode p, body.dark-mode h1, body.dark-mode h2, body.dark-mode h3, body.dark-mode h5 {
+body.dark-mode p, body.dark-mode h1, body.dark-mode h2, body.dark-mode h3, body.dark-mode h4 {
     color: #E2DFD0 !important;
 }
 body.dark-mode #acerca {
